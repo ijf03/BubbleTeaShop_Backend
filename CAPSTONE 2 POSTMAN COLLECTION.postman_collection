@@ -1,0 +1,907 @@
+{
+	"info": {
+		"_postman_id": "3d71ecc8-af42-4f53-8ef5-9b33aec148f8",
+		"name": "s49-s53",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29549838",
+		"_collection_link": "https://dark-station-257096.postman.co/workspace/Batch-311~7fddfd96-85ef-4049-ad0c-176cbfbb9694/collection/29549838-3d71ecc8-af42-4f53-8ef5-9b33aec148f8?action=share&source=collection_link&creator=29549838"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Registration (public)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"sarah_wilson\",\r\n    \"firstName\": \"Sarah\",\r\n    \"lastName\": \"Wilson\",\r\n    \"email\": \"sarah@example.com\",\r\n    \"password\": \"hashed_password_4\",\r\n    \"mobileNo\": \"+2345678901\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User Registration",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n \"userName\": \"janeair\",\r\n  \"firstName\": \"jane\",\r\n  \"lastName\": \"air\",\r\n  \"email\": \"janeair@mail.com\",\r\n  \"mobileNo\": \"09830740381\",\r\n  \"password\": \"janeair123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "233"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e9-iBIWaBiDJLhI6ly0bZRDzKwB89E\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Sep 2023 00:40:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"userName\": \"janeair\",\n    \"firstName\": \"jane\",\n    \"lastName\": \"air\",\n    \"email\": \"janeair@mail.com\",\n    \"password\": \"$2b$10$UDA7aJZBT2tEKkVxyLWqPes3umMRa9T95oFHppqsx.KFb9FombqAm\",\n    \"mobileNo\": \"09830740381\",\n    \"isAdmin\": false,\n    \"_id\": \"6502567063e5e854dd28cc57\"\n}"
+						},
+						{
+							"name": "User Registration",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n \"userName\": \"janeair\",\r\n  \"firstName\": \"jane\",\r\n  \"lastName\": \"air\",\r\n  \"email\": \"janeair@mail.com\",\r\n  \"mobileNo\": \"09830740381\",\r\n  \"password\": \"janeair123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"18-bH5C3sVCh8HHP+bBj6YajQSlEQo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Sep 2023 03:07:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Username is already used"
+						}
+					]
+				},
+				{
+					"name": "User login (public)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"johndoe\",\r\n  \"password\": \"johndoe123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userName\": \"wasabi\",\r\n  \"password\": \"sabifernan123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/users/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "214"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d6-dsAdAFb0IRBuyic7y82aILJAXfc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Sep 2023 02:39:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDI1NTA3NjNlNWU4NTRkZDI4Y2M0YyIsInVzZXJOYW1lIjoid2FzYWJpIiwiaXNBZG1pbiI6ZmFsc2UsImlhdCI6MTY5NDY1OTE0Mn0.kuqzdq1CZwOYh3jFTPYaNAPSGgam0Pbb3OJ3E07YZnw\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get user via ID (admin only)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDI1NjQ5NjNlNWU4NTRkZDI4Y2M1NCIsInVzZXJOYW1lIjoiam9obmRvZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5NDY2MTMyM30.zn1FRbEL8R1aS8CPmxQGTcqgOvFZDBbUPhB5jxJNbDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/users/6502550763e5e854dd28cc4c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"6502550763e5e854dd28cc4c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get my profile (users & admins))",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDI1NjQ5NjNlNWU4NTRkZDI4Y2M1NCIsInVzZXJOYW1lIjoiam9obmRvZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5NDczOTQ1NH0.AyE36VqvIa1oAQNXTDV_srRggyJK1J8cHD_Chxcc98I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user details (admins only)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDI1NjQ5NjNlNWU4NTRkZDI4Y2M1NCIsInVzZXJOYW1lIjoiam9obmRvZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5NDY2MTMyM30.zn1FRbEL8R1aS8CPmxQGTcqgOvFZDBbUPhB5jxJNbDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/users/6502550763e5e854dd28cc4c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"6502550763e5e854dd28cc4c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users (admins only)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDI1NjQ5NjNlNWU4NTRkZDI4Y2M1NCIsInVzZXJOYW1lIjoiam9obmRvZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5NDY2MTMyM30.zn1FRbEL8R1aS8CPmxQGTcqgOvFZDBbUPhB5jxJNbDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "make admin (admins only)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDI1NjQ5NjNlNWU4NTRkZDI4Y2M1NCIsInVzZXJOYW1lIjoiam9obmRvZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5NDY2MTMyM30.zn1FRbEL8R1aS8CPmxQGTcqgOvFZDBbUPhB5jxJNbDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/users/updateAdmin/6502550763e5e854dd28cc4c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"updateAdmin",
+								"6502550763e5e854dd28cc4c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "s",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDI1NjQ5NjNlNWU4NTRkZDI4Y2M1NCIsInVzZXJOYW1lIjoiam9obmRvZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5NDY2MTMyM30.zn1FRbEL8R1aS8CPmxQGTcqgOvFZDBbUPhB5jxJNbDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Honeydew Bubble Soda\",\r\n    \"description\": \"A fizzy twist on bubble tea, featuring the subtle sweetness of honeydew melon and carbonated soda, combined with tapioca pearls.\",\r\n    \"price\": \"130\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/products/newProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"products",
+								"newProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all products (public)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/products/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get active products (public)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/products/active",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"products",
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single product (public)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/products/650268e543181c2b2fa6b4cf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"products",
+								"650268e543181c2b2fa6b4cf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product (admin only)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDI1NjQ5NjNlNWU4NTRkZDI4Y2M1NCIsInVzZXJOYW1lIjoiam9obmRvZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5NDY2MTMyM30.zn1FRbEL8R1aS8CPmxQGTcqgOvFZDBbUPhB5jxJNbDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Peachy Keen Iced Tea\",\r\n    \"description\": \"Quench your thirst with a light and refreshing iced tea infused with the essence of ripe peaches and a hint of citrus.\",\r\n    \"price\": 180\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/products/update/650268e543181c2b2fa6b4cf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"products",
+								"update",
+								"650268e543181c2b2fa6b4cf"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update product",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Peachy Keen Iced Tea\",\r\n    \"description\": \"Quench your thirst with a light and refreshing iced tea infused with the essence of ripe peaches and a hint of citrus.\",\r\n    \"price\": 180\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/products/update/650268e543181c2b2fa6b4cf",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"products",
+										"update",
+										"650268e543181c2b2fa6b4cf"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "326"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"146-F4lS3P+8jY/QkWwDNaRMuXH6QO8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Sep 2023 03:26:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product updated successfully\",\n    \"product\": {\n        \"_id\": \"650268e543181c2b2fa6b4cf\",\n        \"name\": \"Peachy Keen Iced Tea\",\n        \"description\": \"Quench your thirst with a light and refreshing iced tea infused with the essence of ripe peaches and a hint of citrus.\",\n        \"price\": 180,\n        \"isActive\": true,\n        \"createOn\": \"2023-09-14T01:55:28.477Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "archive / deactivate (admin only)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDI1NjQ5NjNlNWU4NTRkZDI4Y2M1NCIsInVzZXJOYW1lIjoiam9obmRvZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5NDY2MTMyM30.zn1FRbEL8R1aS8CPmxQGTcqgOvFZDBbUPhB5jxJNbDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Classic Milk Tea\",\r\n    \"description\": \"A timeless blend of premium black tea and creamy milk, topped with chewy tapioca pearls. Satisfy your cravings with this classic favorite.\",\r\n    \"price\": \"150\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/products/archive/650268e543181c2b2fa6b4cf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"products",
+								"archive",
+								"650268e543181c2b2fa6b4cf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "activate (admin only)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDI1NjQ5NjNlNWU4NTRkZDI4Y2M1NCIsInVzZXJOYW1lIjoiam9obmRvZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5NDY2MTMyM30.zn1FRbEL8R1aS8CPmxQGTcqgOvFZDBbUPhB5jxJNbDo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Classic Milk Tea\",\r\n    \"description\": \"A timeless blend of premium black tea and creamy milk, topped with chewy tapioca pearls. Satisfy your cravings with this classic favorite.\",\r\n    \"price\": \"150\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/products/activate/650268e543181c2b2fa6b4cf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"products",
+								"activate",
+								"650268e543181c2b2fa6b4cf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete (admin only)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDI1NjcwNjNlNWU4NTRkZDI4Y2M1NyIsInVzZXJOYW1lIjoiamFuZWFpciIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5NDY1MjA3N30.Bx_KTVDr57zdOgfsLLebj73JQUzMSP30SeIHDR_bRYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Classic Milk Tea\",\r\n    \"description\": \"A timeless blend of premium black tea and creamy milk, topped with chewy tapioca pearls. Satisfy your cravings with this classic favorite.\",\r\n    \"price\": \"150\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/products/delete/65025d128212538541142555",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"products",
+								"delete",
+								"65025d128212538541142555"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "new order (users only)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDI1NjcwNjNlNWU4NTRkZDI4Y2M1NyIsInVzZXJOYW1lIjoiamFuZWFpciIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2OTQ3NDEzNzh9.5kkunRhuAFHgPBlc4RASUxbjoNG-xK6t_lQmhdYRoZU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"orderDetails\": [\r\n    {\r\n      \"productId\": \"6502688a43181c2b2fa6b4c3\",\r\n      \"quantity\": 4\r\n    },\r\n    {\r\n      \"productOrderedName\": \"Strawberry Bliss Slush\", \r\n      \"quantity\": 2\r\n    },\r\n    {\r\n      \"productOrderedName\": \"Oreo Cookie Milkshake\", \r\n      \"quantity\": 2\r\n    }\r\n  ],\r\n  \"pickUpDate\": \"2023-09-15\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/orders/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View All Orders (admins only)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDI1NjcwNjNlNWU4NTRkZDI4Y2M1NyIsInVzZXJOYW1lIjoiamFuZWFpciIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5NDY1NDk3M30.bOLSnuxoK4lYDeIV0dUNY6Q_r3vBJFzYxHs1VMohWN0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/orders/viewAllOrders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orders",
+								"viewAllOrders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my order (users oly)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDI1NjQ5NjNlNWU4NTRkZDI4Y2M1NCIsInVzZXJOYW1lIjoiam9obmRvZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5NDczOTM2N30.823DX3ruCYb8Fwi22M4Twy6c0S23e1t9rkylrcXNrPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/orders/viewMyOrders/6502567063e5e854dd28cc57",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orders",
+								"viewMyOrders",
+								"6502567063e5e854dd28cc57"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update  Order Status (admins only)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDI1NjQ5NjNlNWU4NTRkZDI4Y2M1NCIsInVzZXJOYW1lIjoiam9obmRvZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5NDc0MTQ3NX0.EASa6Qt5eMFp92RN2M_Yxjqifu9khgdmK997xUsdRtI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"Order Completed\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/orders//6503b39b540cb3f1f89ebb27/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"orders",
+								"",
+								"6503b39b540cb3f1f89ebb27",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
