@@ -27,9 +27,9 @@ db.once('open', () => console.log("Connected to MongoDB"));
 app.use(express.json());
 
 app.use(cors());
-app.use('/b9/users', userRoutes);
-app.use('/b9/products', productRoutes);
-app.use('/b9/orders', orderRoutes);
+app.use('/users', userRoutes);
+app.use('/products', productRoutes);
+app.use('/orders', orderRoutes);
 
 
 if (require.main === module) {
